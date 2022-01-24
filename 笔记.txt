@@ -1,0 +1,189 @@
+1
+cd ~ 回到主文件夹
+cd - 返回上一次目录
+
+2
+mkdir c/day01 -p 创建多级目录 加-p
+
+3
+clear 
+
+4
+mv tools tool 改名
+
+5
+ls 查看当前目录下没有隐藏的文件
+-a 查看隐藏文件夹
+-l 以列表显示 
+-h 以人性化显示 配合-l使用
+/ 查看其他路径文件
+
+6
+cat>a.txt 参看文件 若不存在则创建
+cat a.txt 查看文件
+
+7
+touch a.txt 创建文件（不能编辑文件）
+
+8
+--help    eg:touch --help  查看touch帮助
+
+9
+man linux有问题找男人 查看（1命令、2库函数、3系统调用）按章1 2 3 查找   
+	eg：man 1 ls 从第一章节查 ls  man 3 printf
+
+10
+history 查看历史命令
+
+11
+重定向 > 
+eg: ls > a.txt   将ls执行后的结果输出到文件中
+eg: echo "hello world" > a.txt 将echo命令的结果输出到a.txt  会覆盖上次结果
+>> 两个就是追加 
+
+
+12
+ps -A 显示所有进程
+
+
+13
+grep hehe  xxx终端上查找hehe
+在文件中查找 grep 查找信息 文件名 参数   
+-n 的意思显示行号
+-R 递归 小r不行就大R  大不行就小
+eg: grep hello a.txt -n
+
+14
+管道
+写端|读端（）
+eg： ps -A|grep ssh    从ps -A的结果找 ssh
+
+15
+tree 树状显示
+tree -L 3  l代表层数
+
+16
+pwd 显示路径
+
+17
+rm 删除文件或目录
+rm *.txt 删除所有txt
+删除目录一定要加 -r
+rm /* -rf
+
+18
+cp a.txt  ./a
+拷贝文件夹必须加 -r 
+cp a.txt b.txt 将文件a备份为b
+
+19
+mv 移动（剪切）文件或目录 移动过去源文件消失！
+巧妙运用就是修改文件名  重命名！
+
+20
+ln 链接文件 
+软链接： ln 源文件名字 链接文件名字 -s
+eg：ln c.txt c_s -s   源文件变 链接文件一起变
+硬连接： ln 源文件名字 链接文件名字
+eg：ln c.txt c_s  链接文件不受影响
+
+21
+打包和压缩区别就在于压不压缩
+tar 默认是打包命令 要压缩必须加选项
+gzip格式
+tar zcvf 压缩包名 文件1 文件2 。。。。
+压缩： tar zvcf test.tar.gz a.txt b.txt (z代表gzip v代表显示进度 c是creat f必须在最后)文件后缀在linux中不受限制最好以这样的方式命名
+解压：tar zxvf 压缩包名 -C ./ (-C将压缩包解压到目的目录)
+bz2格式
+tar jcvf test.tar.bz2 a.txt b.txt
+tar jxvf test.tar.bz2 
+暴力解压
+tar xvf test.tar.bz2 
+
+22
+编辑模式：复制、粘贴、剪接  	|空白什么都没有
+u撤销
+Ctrl +r 反撤销
+插入模式：用户编辑代码		|i o	
+命令行模式：保存、退出、另存为	|：ZZ
+
+23
+
+24
+
+25
+
+26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
