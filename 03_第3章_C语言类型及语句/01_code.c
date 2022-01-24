@@ -16,7 +16,6 @@
  *        Company:  
  * ************************************************************************/
 
-
 #include <stdio.h>
 void test01()
 {
@@ -28,25 +27,24 @@ void test01()
 	printf("%f\n", 3.14f);
 	printf("%lf\n", 3.14);
 	printf("%s\n", "hello world");
-
 }
- 
-int data;//在函数外定义的变量 全局变量
+
+int data; //在函数外定义的变量 全局变量
 void test02()
 {
 	//{}复合语句  在复合语句中定义的变量为  局部变量
 	//如果局部变量不初始化 内容不确定
 	int num = 0;
 
-	printf("num = %d\n", num);//读操作
+	printf("num = %d\n", num); //读操作
 
-	int data = num;//num读  data写
+	int data = num; //num读  data写
 
-	data = 100;//data 写
-	if(data > 100);//data 读
+	data = 100; //data 写
+	if (data > 100)
+		; //data 读
 
-	data++;//data = data+1
-
+	data++; //data = data+1
 }
 //变量声明  extern显示声明  不会给变量开辟空间 声明的时候不要给变量赋值
 extern int data2;
@@ -72,12 +70,12 @@ void test05()
 {
 	//int data1=0;
 	//int data2=0;
-	int data1=0,data2=0;
+	int data1 = 0, data2 = 0;
 
 	printf("请输入两个int数据:");
 	scanf("%d %d", &data1, &data2);
 
-	if(data1 > data2)
+	if (data1 > data2)
 	{
 		printf("最大值为:%d\n", data1);
 	}
@@ -85,13 +83,10 @@ void test05()
 	{
 		printf("最大值为:%d\n", data2);
 	}
-
 }
 int main(int argc, char *argv[])
 {
 	test05();
-	
+
 	return 0;
 }
-
-
